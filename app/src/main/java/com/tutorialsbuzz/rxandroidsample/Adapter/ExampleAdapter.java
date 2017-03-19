@@ -41,6 +41,9 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                MainActivity mainActivity = (MainActivity) mContext;
+
                 ((MainActivity) mContext).showFragment(mExample.get(position).mFragment);
             }
         });

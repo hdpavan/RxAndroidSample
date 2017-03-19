@@ -56,15 +56,15 @@ public class FragmentExample6 extends Fragment {
 
         ((MainActivity) getActivity()).enableNavigationIcon();
 
-        Single<List<String>> tvShowSingle = Single.fromCallable(new Callable<List<String>>() {
+        Single<List<String>> single = Single.fromCallable(new Callable<List<String>>() {
             @Override
             public List<String> call() throws Exception {
-                return mRestClient.getFavoriteTvShows();
+                return mRestClient.getCountryList();
             }
         });
 
 
-        mSubscription = tvShowSingle.subscribeOn(Schedulers.io())
+        mSubscription = single.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new SingleSubscriber<List<String>>() {
                     @Override

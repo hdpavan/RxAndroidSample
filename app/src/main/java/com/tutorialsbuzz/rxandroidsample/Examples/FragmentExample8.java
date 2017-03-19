@@ -37,22 +37,22 @@ public class FragmentExample8 extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).enableNavigationIcon();
 
-        Observable<Integer> observable = Observable.from(getIntergerList()).filter(new Func1<Integer, Boolean>() {
-            @Override
-            public Boolean call(Integer integer) {
-                if (integer % 2 == 0) {
-                    return true;
-                }
-                return false;
-            }
-        });
+        Observable<Integer> observable = Observable.from(getIntergerList())
+                .filter(new Func1<Integer, Boolean>() {
+                    @Override
+                    public Boolean call(Integer integer) {
+                        if (integer % 2 == 0) {
+                            return true;
+                        }
+                        return false;
+                    }
+                });
 
 
         mSubscription = observable.subscribe(new Action1<Integer>() {
             @Override
             public void call(Integer integer) {
                 textView.append(String.valueOf(integer) + "\n");
-
             }
         });
 

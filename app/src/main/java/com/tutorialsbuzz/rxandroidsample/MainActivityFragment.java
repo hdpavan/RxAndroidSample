@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import com.tutorialsbuzz.rxandroidsample.Adapter.ExampleAdapter;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample1;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample10;
+import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample11;
+import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample13;
+import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample9;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample2;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample3;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample4;
@@ -18,7 +21,7 @@ import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample5;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample6;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample7;
 import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample8;
-import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample9;
+import com.tutorialsbuzz.rxandroidsample.Examples.FragmentExample12;
 import com.tutorialsbuzz.rxandroidsample.Model.ExampleFragmentAndName;
 
 import java.util.ArrayList;
@@ -63,9 +66,11 @@ public class MainActivityFragment extends Fragment {
         exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample6(), "Single"));
         exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample7(), "Map"));
         exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample8(), "Filter"));
-        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample9(), "PublishSubject"));
-        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample10(), "Filter List"));
-//        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample10(), "Filter List"));
+        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample9(), "Take"));
+        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample10(), "Skip"));
+        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample11(), "Zip"));
+        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample12(), "PublishSubject"));
+        exampleFragmentAndNameList.add(new ExampleFragmentAndName(new FragmentExample13(), "Debounce (Search)"));
 
 
         return exampleFragmentAndNameList;

@@ -5,23 +5,12 @@
     android:gravity="center"
     android:orientation="vertical">
 
-
     <TextView
         android:id="@+id/tv9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text=""
-        android:textSize="32sp" />
+        android:textSize="42sp" />
 
-
-    <Button
-        android:id="@+id/btn9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Click"
-        android:textSize="32sp" />
 
 </LinearLayout>

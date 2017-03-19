@@ -55,14 +55,14 @@ public class FragmentExample4 extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).enableNavigationIcon();
 
-        Observable<List<String>> tvShowObservable = Observable.fromCallable(new Callable<List<String>>() {
+        Observable<List<String>> observable = Observable.fromCallable(new Callable<List<String>>() {
             @Override
             public List<String> call() {
-                return mRestClient.getFavoriteTvShows();
+                return mRestClient.getCountryList();
             }
         });
 
-        mSubscription = tvShowObservable
+        mSubscription = observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<List<String>>() {

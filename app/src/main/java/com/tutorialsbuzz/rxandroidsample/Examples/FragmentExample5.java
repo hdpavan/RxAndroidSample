@@ -59,7 +59,7 @@ public class FragmentExample5 extends Fragment {
         Observable<List<String>> fetchdata = Observable.create(new Observable.OnSubscribe<List<String>>() {
             @Override
             public void call(Subscriber<? super List<String>> subscriber) {
-                List<String> data = mRestClient.getFavoriteTvShows();
+                List<String> data = mRestClient.getCountryList();
                 subscriber.onNext(data);
                 subscriber.onCompleted();
             }

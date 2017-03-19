@@ -2,6 +2,7 @@ package com.tutorialsbuzz.rxandroidsample.Examples;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 
 import com.tutorialsbuzz.rxandroidsample.MainActivity;
 import com.tutorialsbuzz.rxandroidsample.R;
+
+import java.util.ArrayList;
 
 import rx.Observable;
 import rx.Subscription;
@@ -37,28 +40,35 @@ public class FragmentExample7 extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).enableNavigationIcon();
 
-        Observable<Integer> observable = Observable.from(getIntergerList()).map(new Func1<Integer, Integer>() {
-            @Override
-            public Integer call(Integer integer) {
-                return integer * integer;
-            }
-        });
-
+        Observable<Integer> observable = Observable.from(getIntergerList()).
+                map(new Func1<Integer, Integer>() {
+                    @Override
+                    public Integer call(Integer integer) {
+                        return integer * integer;
+                    }
+                });
 
         mSubscription = observable.subscribe(new Action1<Integer>() {
             @Override
             public void call(Integer integer) {
                 textView.append(String.valueOf(integer) + "\n");
-
             }
         });
 
 
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("hello");
+
+        try {
+            Log.d("ArrayList", arrayList.get(1));
+        } catch (Exception e) {
+            Log.d("Exception", e.getMessage());
+        }
+
+
     }
 
-
     private Integer[] getIntergerList() {
-
         return new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
     }
 

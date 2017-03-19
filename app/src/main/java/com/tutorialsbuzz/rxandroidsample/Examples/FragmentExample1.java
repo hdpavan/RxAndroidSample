@@ -37,7 +37,7 @@ public class FragmentExample1 extends Fragment {
         ((MainActivity) getActivity()).enableNavigationIcon();
 
         Observable<String> observable = Observable.just("hello");
-
+        
         subscription = observable.subscribe(new Observer<String>() {
             @Override
             public void onCompleted() {
